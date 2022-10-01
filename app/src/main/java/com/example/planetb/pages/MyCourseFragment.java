@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,11 +16,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.planetb.adapters.TopicCourseAdapter;
+import com.example.planetb.adapters.TwoColumnCourseAdapter;
 import com.example.planetb.course.AddCourseActivity;
 import com.example.planetb.R;
+import com.example.planetb.course.CourseActivity;
+import com.example.planetb.course.CourseWithLinkActivity;
 import com.example.planetb.course.CoursesInterface;
 import com.example.planetb.lists.Courses;
+import com.example.planetb.lists.UserCourses;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -31,7 +35,6 @@ import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 
@@ -40,10 +43,10 @@ import java.util.ArrayList;
 public class MyCourseFragment extends Fragment implements CoursesInterface {
 
     FloatingActionButton addCourseBtn;
-    TopicCourseAdapter myCoursesAdapter;
+    TwoColumnCourseAdapter myCoursesAdapter;
     RecyclerView myCoursesRecycleView;
     ArrayList<Courses> myCoursesArrayList;
-    ArrayList<String> myCourses;
+    ArrayList<UserCourses> myCoursesArraylist;
 
 
     FirebaseAuth mAuth;
@@ -68,17 +71,16 @@ public class MyCourseFragment extends Fragment implements CoursesInterface {
         addCourseBtn = view.findViewById(R.id.addCourseBtn);
         myCoursesRecycleView = view.findViewById(R.id.myCourses_recycle);
         myCoursesArrayList = new ArrayList<>();
-        myCourses = new ArrayList<>();
 
         mAuth = FirebaseAuth.getInstance();
         rootNode = FirebaseDatabase.getInstance("https://planetb-c524b-default-rtdb.firebaseio.com/");
         db = FirebaseFirestore.getInstance();
         storage = FirebaseStorage.getInstance();
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
+        GridLayoutManager layoutManager = new GridLayoutManager(getContext(),2,LinearLayoutManager.VERTICAL,false);
         myCoursesRecycleView.setLayoutManager(layoutManager);
         myCoursesRecycleView.setItemAnimator(new DefaultItemAnimator());
-        myCoursesAdapter = new TopicCourseAdapter(getContext(),myCoursesArrayList,this);
+        myCoursesAdapter = new TwoColumnCourseAdapter(getContext(),myCoursesArrayList,this);
         myCoursesRecycleView.setAdapter(myCoursesAdapter);
 
         eventDbChangeListener();
@@ -100,10 +102,24 @@ public class MyCourseFragment extends Fragment implements CoursesInterface {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
                                 for (DataSnapshot snapshot1 : snapshot.getChildren()){
-                                    myCourses.add(snapshot1.getValue().toString());
-                                    Log.i("data",snapshot1.getValue().toString());
+                                    db.collection("Courses").whereEqualTo("courseName", snapshot1.getValue().toString() )
+                                            .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                                                @Override
+                                                public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                                                    if (error!= null){
+                                                        Log.e("firestore error", error.getMessage());
+                                                        return;
+                                                    }
 
-                                }
+                                                    for (DocumentChange dc : value.getDocumentChanges()){
+                                                        if (dc.getType() == DocumentChange.Type.ADDED){
+                                                            myCoursesArrayList.add(dc.getDocument().toObject(Courses.class));
+                                                        }
+                                                        myCoursesAdapter.notifyDataSetChanged();
+                                                    }
+
+                                                }
+                                            });                                }
                             }
 
                             @Override
@@ -111,38 +127,14 @@ public class MyCourseFragment extends Fragment implements CoursesInterface {
 
                             }
                         });
-
-        Log.i("data","number is " + myCourses.size());
-
-
-        for (int i =0;i < myCourses.size();i++){
-            Log.i("data",myCourses.get(i));
-            db.collection("Courses").whereEqualTo("courseName", myCourses.get(i))
-                    .addSnapshotListener(new EventListener<QuerySnapshot>() {
-                        @Override
-                        public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
-                            if (error!= null){
-                                Log.e("firestore error", error.getMessage());
-                                return;
-                            }
-
-                            for (DocumentChange dc : value.getDocumentChanges()){
-                                if (dc.getType() == DocumentChange.Type.ADDED){
-                                    myCoursesArrayList.add(dc.getDocument().toObject(Courses.class));
-                                }
-                                myCoursesAdapter.notifyDataSetChanged();
-                            }
-
-                        }
-                    });
-        }
-
     }
 
 
     @Override
     public void onPopularCourseClick(int position, String courseName) {
-
+        Intent intent = new Intent(getActivity(), CourseWithLinkActivity.class);
+        intent.putExtra("courseName",courseName);
+        startActivity(intent);
     }
 
     @Override

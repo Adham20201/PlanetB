@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.example.planetb.adapters.CategoryAdapter;
 import com.example.planetb.adapters.TopicCourseAdapter;
+import com.example.planetb.adapters.TwoColumnCourseAdapter;
 import com.example.planetb.course.CourseActivity;
 import com.example.planetb.course.CoursesInterface;
 import com.example.planetb.lists.Categories;
@@ -41,7 +42,7 @@ public class SearchActivity extends AppCompatActivity implements CoursesInterfac
     CategoryAdapter levelAdapter;
     CategoryAdapter typeAdapter;
     CategoryAdapter languageAdapter;
-    TopicCourseAdapter filterCourseAdapter;
+    TwoColumnCourseAdapter filterCourseAdapter;
 
     SearchView searchView;
 
@@ -96,7 +97,7 @@ public class SearchActivity extends AppCompatActivity implements CoursesInterfac
         levelAdapter = new CategoryAdapter(levelArrayList, SearchActivity.this , this,"courseLevel");
         typeAdapter = new CategoryAdapter(typeArrayList, SearchActivity.this , this,"courseType");
         languageAdapter = new CategoryAdapter(languageArrayList, SearchActivity.this , this,"courseLanguage");
-        filterCourseAdapter = new TopicCourseAdapter(SearchActivity.this,filterCourseArrayList,this);
+        filterCourseAdapter = new TwoColumnCourseAdapter(SearchActivity.this,filterCourseArrayList,this);
 
 
 
