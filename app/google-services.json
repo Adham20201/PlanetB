@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "597706925080",
+    "project_id": "planetb-c524b",
+    "storage_bucket": "planetb-c524b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597706925080:android:a33ab5bb5cbd4016000f6d",
+        "android_client_info": {
+          "package_name": "com.example.planetb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "597706925080-andgl8752dfn99vov0v6b9kv4u1obhsp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB0AHi4KxAxWE2WKR6ewmFwX3jXsac4uJY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "597706925080-andgl8752dfn99vov0v6b9kv4u1obhsp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

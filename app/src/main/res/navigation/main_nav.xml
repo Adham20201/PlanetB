@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/exploreFragment">
+
+    <fragment
+        android:id="@+id/exploreFragment"
+        android:name="com.example.planetb.pages.ExploreFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_explore" />
+
+    <fragment
+        android:id="@+id/myCourseFragment"
+        android:name="com.example.planetb.pages.MyCourseFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_my_course" />
+
+    <fragment
+        android:id="@+id/wishlistFragment"
+        android:name="com.example.planetb.pages.WishlistFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_wishlist" />
+
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.planetb.pages.AccountFragment"
+        android:label="fragment_blank"
+        tools:layout="@layout/fragment_account" />
+
+</navigation>

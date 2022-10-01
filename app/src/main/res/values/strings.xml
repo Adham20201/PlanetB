@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">Planet B</string>
+    <string name="explore">Explore</string>
+    <string name="my_course">My Course</string>
+    <string name="wishlist">Wishlist</string>
+    <string name="account">Account</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

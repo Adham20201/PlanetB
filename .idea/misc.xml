@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable-v24/background_category_blue.xml" value="0.2015" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_bottom.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_button.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_categorie.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_category.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_editbox.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_icon.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_login_icon.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_search_button.xml" value="0.1265" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_searchbar.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/background_top.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_add.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_apple.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_english.xml" value="0.1265" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_facebook.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_filter.xml" value="0.1265" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_german.xml" value="0.1265" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_google.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_logo.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_logo_2.xml" value="0.67" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_mail.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_menu_account.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_menu_explore.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_menu_my_course.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_menu_mycourse.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_notification.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_online.xml" value="0.1265" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_password.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_person.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_person_blue.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_producer.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_sort.xml" value="0.1265" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_spanish.xml" value="0.1265" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_trolley.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/ic_waving_hand.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/drawable/nav_ripple.xml" value="0.2225" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/font/antic.xml" value="0.2752577319587629" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/activity_add_course.xml" value="0.3135021097046414" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/activity_course.xml" value="0.18" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/activity_course_blue.xml" value="0.25798611111111114" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/activity_login.xml" value="0.25798611111111114" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/activity_main.xml" value="0.38697916666666665" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/activity_search.xml" value="0.22" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/activity_signup.xml" value="0.25798611111111114" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/activity_splash_screen.xml" value="0.18" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/cards_category.xml" value="0.25798611111111114" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/cards_courses.xml" value="0.18426678067550234" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/cards_popular_course.xml" value="0.38697916666666665" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/fragment_account.xml" value="0.38697916666666665" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/fragment_explore.xml" value="0.18" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/fragment_my_course.xml" value="0.25798611111111114" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/fragment_mycourse.xml" value="0.38697916666666665" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/layout/fragment_wishlist.xml" value="0.38697916666666665" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.38697916666666665" />
+        <entry key="..\:/AndroidProjects/PlanetB/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2225" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
